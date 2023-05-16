@@ -1,0 +1,36 @@
+html {
+    font-size: 12px; 
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #000000;
+    color: white; /*text color*/
+  }
+
+  h1 {
+    font-size: 100px;
+    text-align: center;
+    margin: 0; /*space outside the border*/
+    padding: 5px 0; /*space around the content*/
+    color: white;
+    text-shadow: 10px 10px 10px #6c6c6c; /*horizontal, vertical, blur, color*/
+  }
+  
+  p,
+  li {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 1px; /*makes it more readable?*/
+  }
+
+  body {
+    width: 750px;
+    margin: 0 auto; /*top-bottom, left-right*/
+    background-color: rgb(33, 33, 33);
+    padding : 20px 20px 20px 20px;
+    border : 1px solid white;
+  }
+
+  img {
+    display: block; /*gives the in-line image, block-like behavior*/
+    margin: 0 auto;
+    width: 300px; /*resizes image*/
+  }
