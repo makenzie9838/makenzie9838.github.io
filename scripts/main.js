@@ -38,25 +38,26 @@ if (!localStorage.getItem("name")) {
     alert(`Welcome back, ${storedName}!`);
   }
 
-//initializes variables for unordered list, list name, description and selects the html file
+//initializes variables for list to act as a comment section
 const list = document.createElement('ul');
 const listName = document.createElement('h3');
 const listDescription = document.createElement('p');
 const html = document.querySelector('html');
 
-//names the list and describes how the list is used
-listName.textContent = 'Dynamic To-Do List';
-listDescription.textContent = 'Click anywhere to add a new task to the list. Click an existing task to change it.'
+//adds text for users to understand how the comment section works
+listName.textContent = 'Comments';
+listDescription.textContent = 'Click anywhere to add a new comment. Click an existing comment to edit it.'
 
-//adds those variables to the document
-document.body.appendChild(listName);
-document.body.appendChild(listDescription);
-document.body.appendChild(list);
+//adds the comment section to the bottom of the "post"
+const endOf00 = document.getElementById("end-Of-00");
+endOf00.appendChild(listName);
+endOf00.appendChild(listDescription);
+endOf00.appendChild(list);
 
-//click events to add or change items in the list
+//click events to add or change comments
 html.onclick = () => {
   const listItem = document.createElement('li');
-  const listContent = prompt('What do you have to do today?');
+  const listContent = prompt('Leave a comment...');
   if (listContent) {
     listItem.textContent = listContent;
     list.appendChild(listItem);
@@ -64,7 +65,7 @@ html.onclick = () => {
 
   listItem.onclick = function(e) {
     e.stopPropagation();
-    const listContent = prompt('What else do you have to do today?');
+    const listContent = prompt('Editing comment...');
     if (listContent) {
       this.textContent = listContent;
     }
