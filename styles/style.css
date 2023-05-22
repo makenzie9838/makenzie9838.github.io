@@ -13,12 +13,14 @@ body {
 h2 {
   font-size: 100px;
   text-align: center;
-  margin: 5%; /*space outside the border*/
+  /*margin: 5%; /*space outside the border*/
   text-shadow: 10px 10px 10px #6c6c6c; /*horizontal, vertical, blur, color*/
 }
 
-img {
+img,
+video {
   display: block; /*gives the in-line image, block-like behavior*/
-  margin: 0 auto;
+  margin: 5% auto;
   width: 300px; /*resizes image*/
 }
+
