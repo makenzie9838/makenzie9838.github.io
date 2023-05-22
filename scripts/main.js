@@ -38,36 +38,51 @@ if (!localStorage.getItem("name")) {
     alert(`Welcome back, ${storedName}!`);
   }
 
-//initializes variables for list to act as a comment section
-const list = document.createElement('ul');
-const listName = document.createElement('h3');
-const listDescription = document.createElement('p');
-
-//adds text for users to understand how the comment section works
-listName.textContent = 'Comments';
-listDescription.textContent = 'Click Comments to add one. Click an existing comment to edit it.'
-
-//adds the comment section to the bottom of the "post"
-const post00 = document.getElementById("00");
-post00.appendChild(listName);
-post00.appendChild(listDescription);
-post00.appendChild(list);
-
-//click events to add or change comments
-listName.onclick = () => {
-  const listItem = document.createElement('li');
-  const listContent = prompt('Leave a comment...');
-  if (listContent) {
-    listItem.textContent = listContent;
-    list.appendChild(listItem);
-  }
-
-  listItem.onclick = function(e) {
-    e.stopPropagation();
-    const listContent = prompt('Editing comment...');
-    if (listContent) {
-      this.textContent = listContent;
-    }
-  }
+//adds the comment section to the bottom of each article but lost click events
+let articles = document.querySelectorAll('article');
+for (let i = 0; i < articles.length; i++) {
+  const commentSection = document.createElement('ul');
+  const commentTitle = document.createElement('h3');
+  const commentDescription = document.createElement('p');
+  commentTitle.textContent = 'Comments';
+  commentDescription.textContent = 'Click Comments to add one. Click an existing comment to edit it.'
+  articles[i].appendChild(commentTitle);
+  articles[i].appendChild(commentDescription);
+  articles[i].appendChild(commentSection); 
 }
+
+//managed to add click event for all commentTitles based on h3 tag
+  //but lost ability to actually add the comment to the comment section and etc. ...
+let commentTitles = document.querySelectorAll('h3');
+
+let clickEvent = () => {
+    const comment = document.createElement('li');
+    const commentContent = prompt('Leave a comment...');
+    if (commentContent) {
+      comment.textContent = commentContent;
+      alert(`${comment.textContent}`);
+      commentSection.appendChild(comment);
+    }
+}
+
+commentTitles.forEach(title => {
+    title.addEventListener('click', clickEvent)
+});
+
+// listName.onclick = () => {
+//   const listItem = document.createElement('li');
+//   const listContent = prompt('Leave a comment...');
+//   if (listContent) {
+//     listItem.textContent = listContent;
+//     list.appendChild(listItem);
+//   }
+
+//   listItem.onclick = function(e) {
+//     e.stopPropagation();
+//     const listContent = prompt('Editing comment...');
+//     if (listContent) {
+//       this.textContent = listContent;
+//     }
+//   }
+// }
 
