@@ -59,7 +59,16 @@
       <article class="project">
         <h2>Waves of Nice</h2>
 
-        <video src="images/nice-waves.MOV" controls>
+        <video
+          controls
+          loop
+        >
+          <!--should convert to an audio file to play in the backgroun-->
+          
+          <!--unsure if MOV needs this `type="video/mp4"`-->
+          <source src="images/nice-waves.MOV"/>
+          <!--should include other types-->
+
           <p>
             Your browser doesn't support HTML video. Here is a 
             <!--need to update link later-->
