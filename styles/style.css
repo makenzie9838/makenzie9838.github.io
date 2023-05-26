@@ -24,3 +24,8 @@ video {
   width: 300px; /*resizes but keeps aspect-ratio when only width is adjusted*/
 }
 
+iframe {
+  display: block;
+  margin: 5% auto;
+}
+
