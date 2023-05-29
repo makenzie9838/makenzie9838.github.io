@@ -18,7 +18,8 @@ h2 {
 }
 
 img,
-video {
+video,
+table {
   display: block; /*gives the in-line image, block-like behavior*/
   margin: 5% auto;
   width: 300px; /*resizes but keeps aspect-ratio when only width is adjusted*/
