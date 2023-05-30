@@ -30,3 +30,8 @@ iframe {
   margin: 5% auto;
 }
 
+/*why won't this work?*/
+thead,
+tfoot {
+  font-weight: bold;
+}
