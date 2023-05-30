@@ -124,22 +124,40 @@
 
         <!--where is the default styling??-->
         <table>
+          <caption>
+            Table for Testing and Experimentation
+          </caption>
+
           <colgroup>
+            <col />
+            <col style="background-color: yellow" />
             <col />
             <col style="background-color: yellow" />
           </colgroup>
 
-          <tr>
-            <th colspan="2">First cell</th>
-            <th colspan="2">Second cell</th>
-          </tr>
+          <!--could also use id and headers instead of scope-->
+          <thead>
+            <tr>
+              <th scope="colgroup" colspan="2">Title 1</th>
+              <th scope="colgroup" colspan="2">Title 2</th>
+            </tr>
+          </thead>
 
-          <tr>
-            <td>Fifth cell</td>
-            <td>Sixth cell</td>
-            <td>Seventh cell</td>
-            <td>Eight cell</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th scope="row">Cells</th>
+              <td>Fifth cell</td>
+              <td>Sixth cell</td>
+              <td>Seventh cell</td>
+              <td>Eight cell</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <th colspan="4">Footer 1</th>
+            </tr>
+          </tfoot>
         </table>
 
       </article>
