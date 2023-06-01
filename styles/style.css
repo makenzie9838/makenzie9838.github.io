@@ -1,9 +1,14 @@
+/* basic element styling */
 body {
   background-color: white;
   color: black; /*text color*/
+  font: 1000 1rem 'Rajdhani', sans-serif;
+  /*
+  ^that is short-hand for everything below
   font-family: 'Rajdhani', sans-serif;
   font-size: 1rem; 
   font-weight: 1000;
+  */
   line-height: 140%;
   letter-spacing: 0;
   padding : 20px 20px 20px 20px;
@@ -33,5 +38,19 @@ iframe {
 /*why won't this work?*/
 thead,
 tfoot {
-  font-weight: bold;
+  font-weight: bolder;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*class selector*/
+.project,
+a:visited { /*changes color of links when visited or hovering over */
+  color: black
+}
+
+a:hover {
+  text-decoration: none;
 }
