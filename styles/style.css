@@ -2,7 +2,7 @@
 body {
   background-color: white;
   color: black; /*text color*/
-  font: 1000 1rem 'Rajdhani', sans-serif;
+  font: bold 1rem 'Rajdhani', sans-serif;
   /*
   ^that is short-hand for everything below
   font-family: 'Rajdhani', sans-serif;
@@ -33,11 +33,13 @@ table {
 iframe {
   display: block;
   margin: 5% auto;
-}
+} 
 
-/*why won't this work?*/
+
+
 thead,
 tfoot {
+  /*this is being applied so it isn't a problem with cascade, specificity or inheritance...*/
   font-weight: bolder;
 }
 
